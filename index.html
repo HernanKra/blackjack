@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Black Jack</title>
+        <link rel="stylesheet" href="blackjack.css">
+    </head>
+
+    <body>
+     <div class="menu" id="menu">
+        <h1>Bienvenido al Blackjack</h1>
+        <h2>Para comenzar a jugar primero ingresa tus datos</h2>
+        <input type="text" placeholder="Ingresa tu nombre" name="" id="nombre">
+        <input type="text" placeholder="Ingresa tu edad" id="edad">
+        <button id="ingresar" class="ingresar"> ingresar</button>
+     </div>           
+    <div id="juego">
+        <h2>Mesa: <span id="mesa"></span></h2>
+        <div id="mesa-cards">
+            <img id="hidden" src="./cards/BACK.png">
+        </div>
+
+        <h2>Jugador: <span id="jugador"></span></h2>
+        <div id="jugador-cards"></div>
+
+        <br>
+        <button id="hit">Pedir</button>
+        <button id="stay">Plantarse</button>
+        <p id="resultado"></p>
+
+    </div>
+    <script src="blackjack.js"></script>
+    </body>
+</html>

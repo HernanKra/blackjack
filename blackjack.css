@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#mesa-cards img {
+    height: 175px;
+    width: 125px;
+    margin: 1px;
+}
+
+#jugador-cards img {
+    height: 175px;
+    width: 125px;
+    margin: 1px;
+}
+
+#hit {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+}
+
+#stay {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+}
+
+
+#menu {
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 30vmax;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu.active{
+    visibility: hidden;
+    opacity: 0;
+}
+
+#nombre {
+    width: 250px;
+    height: 25px;
+    margin-bottom: 10px ;
+}
+#edad {
+    width: 250px;
+    height: 25px;
+}
+#ingresar {
+    padding: 5px;
+    margin-top: 10px;
+}
