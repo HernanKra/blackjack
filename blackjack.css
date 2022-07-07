@@ -33,7 +33,7 @@ body {
     background-color: white;
     display: flex;
     flex-direction: column;
-    height: 30vmax;
+    height: 90vh;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -56,4 +56,11 @@ body {
 #ingresar {
     padding: 5px;
     margin-top: 10px;
+}
+
+#bienvenido {
+    text-align: start;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 40px;
 }

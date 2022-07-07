@@ -1,17 +1,27 @@
 let btnMenu = document.getElementById('ingresar');
 const menu = document.getElementById('menu');
-let nombre = document.getElementById('nombre');
-let edad = document.getElementById('edad');
 
-console.log(nombre.value);
-console.log(edad.value);
 
 btnMenu.addEventListener('click', e => {
     if(e.target === btnMenu) {
             menu.classList.toggle('active')
-            
     }
 })
+
+btnMenu.onclick = almacenarDatos;
+
+ function almacenarDatos()  {
+    let nombre = document.getElementById('nombre')
+    let edad = document.getElementById('edad')
+    return(nombre, edad)
+}
+
+let usuario = [nombre.value, edad.value]
+
+localStorage.setItem("usuarios", JSON.stringify(usuario));
+let datosUsuario = JSON.parse(localStorage.getItem("usuarios"));
+
+document.getElementById('bienvenido').innerHTML = `Bienvenido ${datosUsuario[0]} !`;
 
 let mesa = 0;
 let jugador = 0;
@@ -109,25 +119,23 @@ function stay() {
 
     let message = "";
     if (jugador > 21) {
-        message = "Perdiste!";
+        message = Swal.fire('Perdiste!');
     }
     else if (mesa > 21) {
-        message = "Ganaste!";
+        message = Swal.fire('Ganaste!');
     }
-    //both you and dealer <= 21
     else if (jugador == mesa) {
-        message = "Empate!";
+        message = Swal.fire('Empate!');
     }
     else if (jugador > mesa) {
-        message = "Ganaste!";
+        message = Swal.fire('Ganaste!');
     }
     else if (jugador < mesa) {
-        message = "Perdiste!";
+        message = Swal.fire('Perdiste!');
     }
 
     document.getElementById("mesa").innerText = mesa;
     document.getElementById("jugador").innerText = jugador;
-    document.getElementById("resultado").innerText = message;
 }
 
 function getValue(card) {
